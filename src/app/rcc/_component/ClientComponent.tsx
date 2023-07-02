@@ -7,7 +7,9 @@ import { getPost } from '@/util/getPost'
 const ClientComponent = () => {
   const { isLoading, isError, data } = useQuery({
     queryKey: ['post'],
-    queryFn: getPost,
+    queryFn: () => {
+      return getPost()
+    },
   })
 
   if (isLoading) {

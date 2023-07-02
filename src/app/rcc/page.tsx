@@ -4,16 +4,21 @@ import { getRandomNumber } from '@/util/getRandomNumber'
 
 import ClientComponent from './_component/ClientComponent'
 
-const RCC = () => {
+const Rcc = () => {
   const randomNumber = getRandomNumber()
 
   return (
     <div className='grid gap-y-5'>
       <p>Hello RCC! {randomNumber}</p>
       <ClientComponent />
-      <Link href='/'>to Home</Link>
+      <Link
+        href='/'
+        prefetch={false}
+      >
+        to Home
+      </Link>
     </div>
   )
 }
 
-export default RCC
+export default Rcc
