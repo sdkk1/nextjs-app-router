@@ -16,7 +16,7 @@ export const getPost = async (options?: Options): Promise<Post> => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
   const randomNumber = getRandomNumber();
-  const cacheStrategy = options?.noCache ? 'no-store' : 'force-cache';
+  const cacheStrategy = options?.noCache ? 'no-store' : undefined;
   const revalidateTime = options?.revalidate ? options.revalidate : undefined;
 
   const res = await fetch(
