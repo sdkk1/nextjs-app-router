@@ -1,17 +1,18 @@
 import Link from 'next/link'
-import { Suspense } from 'react'
+
+import { getRandomNumber } from '@/util/getRandomNumber'
 
 import ClientComponent from './_component/ClientComponent'
 
 const RCC = () => {
+  const randomNumber = getRandomNumber()
+
   return (
-    <main>
-      <p>Hello RCC!</p>
-      <Suspense fallback={<p>fetching...</p>}>
-        <ClientComponent />
-      </Suspense>
+    <div className='grid gap-y-5'>
+      <p>Hello RCC! {randomNumber}</p>
+      <ClientComponent />
       <Link href='/'>to Home</Link>
-    </main>
+    </div>
   )
 }
 
