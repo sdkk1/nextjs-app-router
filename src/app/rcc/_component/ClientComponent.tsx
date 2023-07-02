@@ -1,11 +1,24 @@
 'use client'
 
-const ClientComponent = async () => {
-  const data = await (
-    await fetch(`http://localhost:3000/api/test`, { cache: 'no-store' })
-  ).json()
-  const now = data['now']
-  return <p>{`Now - ${now}`}</p>
+import { useQuery } from '@tanstack/react-query'
+
+import { getPost } from '@/util/getPost'
+
+const ClientComponent = () => {
+  const { isLoading, isError, data } = useQuery({
+    queryKey: ['post'],
+    queryFn: getPost,
+  })
+
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
+
+  if (isError) {
+    return <p>Error!</p>
+  }
+
+  return <p>{data.title}</p>
 }
 
 export default ClientComponent
