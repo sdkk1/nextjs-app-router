@@ -5,18 +5,23 @@ import { getRandomNumber } from '@/util/getRandomNumber'
 
 import ServerComponent from './_component/ServerComponent'
 
-const RSC = () => {
+const RscDynamic = () => {
   const randomNumber = getRandomNumber()
 
   return (
     <div className='grid gap-y-5'>
-      <p>Hello RSC! {randomNumber}</p>
+      <p>Hello RSC Dynamic! {randomNumber}</p>
       <Suspense fallback={<p>Loading...</p>}>
         <ServerComponent />
       </Suspense>
-      <Link href='/'>to Home</Link>
+      <Link
+        href='/'
+        prefetch={false}
+      >
+        to Home
+      </Link>
     </div>
   )
 }
 
-export default RSC
+export default RscDynamic
