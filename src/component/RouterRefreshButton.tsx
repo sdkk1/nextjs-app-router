@@ -1,19 +1,19 @@
-'use client'
+'use client';
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 
 const RouterRefreshButton = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <button
       onClick={() => {
-        router.refresh()
+        router.refresh();
       }}
     >
       Refresh
     </button>
-  )
-}
+  );
+};
 
-export default RouterRefreshButton
+export default RouterRefreshButton;

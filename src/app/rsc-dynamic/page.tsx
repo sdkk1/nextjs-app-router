@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import { Suspense } from 'react'
+import Link from 'next/link';
+import { Suspense } from 'react';
 
-import { getRandomNumber } from '@/util/getRandomNumber'
+import { getRandomNumber } from '@/util/getRandomNumber';
 
-import ServerComponent from './_component/ServerComponent'
+import ServerComponent from './_component/ServerComponent';
 
 const RscDynamic = () => {
-  const randomNumber = getRandomNumber()
+  const randomNumber = getRandomNumber();
 
   return (
     <div className='grid gap-y-5'>
@@ -21,7 +21,7 @@ const RscDynamic = () => {
         to Home
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default RscDynamic
+export default RscDynamic;

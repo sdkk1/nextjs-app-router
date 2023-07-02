@@ -1,8 +1,8 @@
-import { getPost } from '@/util/getPost'
+import { getPost } from '@/util/getPost';
 
 const ServerComponent = async () => {
-  const post = await getPost({ noCache: true })
-  return <p>{post.title}</p>
-}
+  const post = await getPost({ noCache: true });
+  return <p>{post.title}</p>;
+};
 
-export default ServerComponent
+export default ServerComponent;

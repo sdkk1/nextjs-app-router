@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import RouterRefreshButton from '@/component/RouterRefreshButton'
+import RouterRefreshButton from '@/component/RouterRefreshButton';
 
 const Home = () => {
   return (
@@ -34,7 +34,7 @@ const Home = () => {
         <RouterRefreshButton />
       </span>
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

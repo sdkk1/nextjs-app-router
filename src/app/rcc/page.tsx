@@ -1,11 +1,11 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { getRandomNumber } from '@/util/getRandomNumber'
+import { getRandomNumber } from '@/util/getRandomNumber';
 
-import ClientComponent from './_component/ClientComponent'
+import ClientComponent from './_component/ClientComponent';
 
 const Rcc = () => {
-  const randomNumber = getRandomNumber()
+  const randomNumber = getRandomNumber();
 
   return (
     <div className='grid gap-y-5'>
@@ -18,7 +18,7 @@ const Rcc = () => {
         to Home
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Rcc
+export default Rcc;
